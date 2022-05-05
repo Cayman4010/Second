@@ -8,7 +8,7 @@ public class Ex9 {
         int a = sc.nextInt();
         int b = sc.nextInt();
         double sg = Math.sqrt(a * b);
-        System.out.println(sg);
+        System.out.println("Sg = "+sg);
     }
 
 }
