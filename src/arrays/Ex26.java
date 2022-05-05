@@ -1,0 +1,32 @@
+package arrays;
+
+import java.util.Scanner;
+
+public class Ex26 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input value of N: ");
+        int N = sc.nextInt();
+        int[] A = new int[N];
+        int sum = 0;
+        System.out.print("Input value of elements of array A: ");
+        for (int i = 0; i < N; i++) {
+            A[i] = sc.nextInt();
+        }
+        for (int i = 1; i <= N - 1; i++) {
+            if (Math.abs(A[i] - A[i - 1]) % 2 == 1) {
+                sum++;
+            }
+        }
+        if (sum == A.length - 1) {
+            System.out.println(0);
+        } else {
+            for (int i = 1; i <= N - 1; i++) {
+                if (Math.abs(A[i] - A[i - 1]) % 2 != 1) {
+                    System.out.println(i);
+                    break;
+                }
+            }
+        }
+    }
+}

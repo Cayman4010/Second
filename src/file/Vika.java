@@ -1,0 +1,19 @@
+package file;
+
+import java.io.*;
+import java.util.Scanner;
+
+public class Vika {
+    public static void main(String[] arr) throws IOException {
+        Scanner sc = new Scanner(System.in);
+
+        String fileName = new String("Вика.txt");
+        File rootDir = new File("E:\\Programs\\Java Course\\Lection 8\\Home_work");
+        if (!rootDir.exists()) rootDir.mkdirs();
+        File newFile = new File(rootDir, fileName);
+        if (!newFile.exists()) newFile.createNewFile();
+        PrintStream ps = new PrintStream(newFile);
+        ps.print("Вика, привет!");
+        ps.close();
+    }
+}
